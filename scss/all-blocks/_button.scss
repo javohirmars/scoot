@@ -1,4 +1,6 @@
 .btn {
+    display: inline-block;
+
     min-width: 180px;
     font-family: 'Space Mono';
     font-style: normal;
@@ -13,7 +15,7 @@
     
     &:hover {
         color: #FCB72B;
-        background-color: $white;
+        background: none;
         border: 3px solid $yellow;
     }
 }

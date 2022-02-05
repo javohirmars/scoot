@@ -1,0 +1,127 @@
+.hero {
+    background-image: url(./../images/hero-bcg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    &__container {
+        margin-bottom: 160px;
+    }
+    
+    &__box {
+        max-width: 500px;
+        padding-top: 153px;
+        padding-bottom: 153px;
+    }
+    
+    &__heading {
+        @include setFont('Space Mono', bold, 56px, 56px, $white);  
+        letter-spacing: -2.5px;
+        margin-bottom: 40px;
+    }
+    
+    &__box-mini {
+        padding-left: 95px;
+    }
+    
+    &__text {
+        position: relative; 
+        @include setFont('Lexend Deca', 400, 15px, 25px, $white);
+        margin-bottom: 40px;
+        
+        &::before {
+            position: absolute;
+            content: url('./../images/line1.svg');
+            top: 40%;
+            right: 457px;
+        }
+        
+        &::after {
+            position: absolute;
+            content: url('./../images/arrow1.svg');
+            top: 40%;
+            left: 440px;
+        }
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+    
+    .hero {
+        background-image: url(./../images/hero-bcg@2x.png);
+    }
+} 
+
+@media only screen and (max-width:1005px) {
+    .hero {
+        background-position: 73% 50%; 
+        
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        &__box {
+            max-width: 573px;
+            align-items: center;
+            text-align: center;
+            
+            padding-top: 137px;
+            padding-bottom: 217px;
+        }
+        
+        &__heading {
+            margin-bottom: 24px;            
+        }
+        
+        &__box-mini {
+            padding-left: 0;
+        }
+        
+        &__text {
+            margin-bottom: 32px;
+            &::before {
+                display: none;
+            }
+            
+            &::after {
+                top: 250%;
+                left: -220px;                
+            }
+        }
+    }    
+}
+
+@media only screen and (max-width: 600px) {
+    .hero {
+        background-position: 95% 50%; 
+        
+        &__box {
+            max-width: 311px;
+            
+            padding-top: 115px;
+            padding-bottom: 179px;            
+        }
+        
+        &__heading {
+            font-size: 40px;
+            line-height: 40px;
+        }
+        
+        &__text {
+            margin-bottom: 32px;
+            
+            &::after {
+                top: 160%;
+                left: -345px;
+                
+            }            
+        }
+    }
+}

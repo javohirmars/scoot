@@ -20,6 +20,7 @@
     
     &__list {
         display: flex;
+        
     }
     
     &__item {
@@ -30,7 +31,11 @@
     
     &__link {
         text-transform: capitalize;
-        @include setFont('Space Mono', bold, 15px, 25px, $dimGrey)
+        @include setFont('Space Mono', bold, 15px, 25px, $dimGrey);
+
+        &:hover, &:active {
+            color: $yellow;
+        }
     }
 
     &__btn {
@@ -106,13 +111,13 @@
         }
         
         &__link {
-            @include setFont('Space Mono', bold, 18px, 25px, $lightGrey)            
+            @include setFont('Space Mono', bold, 18px, 25px, $lightGrey);            
         }
         
         &__button {
             display: none;
             position: absolute;
-            top: 700%;
+            top: 600%;
             left: 32px; 
             z-index: 3;               
         }
