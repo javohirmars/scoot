@@ -1,0 +1,74 @@
+.telemet {
+    
+    &__container {
+        margin-bottom: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    &__box {
+        width: 445px;
+    }
+    
+    &__box-heading {
+        @include setFont ('Space Mono', bold, 48px, 48px, $darkNavy);
+        letter-spacing: -2.14286px;
+        margin-bottom: 24px;
+    }
+    
+    &__box-text {
+        @include setFont ('Lexend Deca', 400,   15px, 25px, $dimGrey);
+        margin-bottom: 40px;
+    }
+    
+    &__box-btn {
+    }
+    
+    &__img-wrapper {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: url(./../images/arrow2.svg);
+            bottom: -8px;
+            left: -30%;
+            z-index: 2;
+            
+        }
+        &::after {
+            position: absolute;
+            content: url(./../images/oval1.svg);
+            bottom: -8px;
+            left: 110%;
+            z-index: 1;
+        }
+    }
+    
+    &__img {
+        border-radius: 50%;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .telemet {
+        
+        &__container {
+            margin-bottom: 128px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        &__box-heading {
+            margin-bottom: 40px;
+        }
+        
+        &__img-wrapper {
+            order: -1;
+            margin-bottom: 56px;
+        }
+        
+        &__img {
+        }
+    }
+}
