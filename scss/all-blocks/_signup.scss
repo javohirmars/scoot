@@ -1,0 +1,104 @@
+.signup {
+    background-color: $darkNavy;
+    background-image: url(./../images/loona.svg);
+    background-repeat: no-repeat;
+    background-position: calc(50% + 300px) calc(50% + 180px);
+    
+    &__container {     
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 102px;
+        padding-bottom: 102px;
+    }
+    
+    &__heading {
+        width: 415px;
+        @include setFont ('Space Mono', bold, 48px, 48px,$white);
+        letter-spacing: -2.14286px;
+    }
+    
+    &__apps {
+        display: flex;
+    }
+    
+    &__app {       
+        &:not(:first-child){
+            margin-left: 18px;
+        }
+    }
+    
+    &__app-link {
+        display: flex;
+        align-items: center;
+        background-color: $lightGrey;
+        border-radius: 4px;
+        padding: 8px 15px 8px 16px;
+    }
+    
+    &__app-icon {
+        width: 25px;
+        height: 28px;
+        margin-right: 12px;
+    }
+    
+    &__app-heading {
+        @include setFont ('Space Mono', bold, 10px, 15px, $darkNavy);
+        letter-spacing: -0.446429px;
+    }
+    
+    &__app-txt {
+        @include setFont ('Space Mono', bold, 20px, 24px, $darkNavy);
+        
+    }
+}
+
+@media only screen and (max-width:950px) {
+    .signup {
+        background-position: calc(50% - 120px) calc(50% + 180px);
+        
+        &__container {     
+            flex-direction: column;
+            text-align: center;
+            padding-top: 62px;
+            padding-bottom: 62px;
+        }
+        
+        &__heading {
+            
+            width: 457px;
+            margin-bottom: 40px;
+        }
+        
+        &__app-link {
+            padding: 8px 12px 7px 12px;
+        }
+
+        &__app-icon {
+            width: 18px;
+            height: 20px;
+            margin-right: 12px;
+        }
+
+        &__app-heading {
+            @include setFont ('Space Mono', bold, 8px, 12px, $darkNavy);
+        }
+        
+        &__app-txt {
+            @include setFont ('Space Mono', bold, 16px, 20px, $darkNavy);
+        }
+    }
+}
+
+
+@media only screen and (max-width:500px) {
+    .signup {
+        background-position: calc(50% - 120px) calc(50% + 180px);
+        
+        &__heading {
+            font-size: 32px;
+            width: 311px;
+            margin-bottom: 40px;
+        }
+    }
+}
