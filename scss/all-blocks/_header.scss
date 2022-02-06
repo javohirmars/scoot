@@ -32,12 +32,12 @@
     &__link {
         text-transform: capitalize;
         @include setFont('Space Mono', bold, 15px, 25px, $dimGrey);
-
+        
         &:hover, &:active {
             color: $yellow;
         }
     }
-
+    
     &__btn {
         display: none;
         position: absolute;
@@ -45,12 +45,20 @@
         outline: none;
         border: none;        
     }
-
+    
     .menu__off {
         display: none;
     }
 }
 
+@media only screen and (max-width:1005px){
+    .header {        
+        &__container {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+}
 @media only screen and (max-width:700px){
     .header {
         position: relative;
@@ -65,7 +73,7 @@
         
         &__logo-img {
             margin-right: 0;
-
+            
         }
         
         &__nav {
@@ -78,7 +86,7 @@
             height: 100vh;
             z-index: 1;               
         }
-
+        
         &--active &__nav {
             display: block;
         }
@@ -121,7 +129,7 @@
             left: 32px; 
             z-index: 3;               
         }
-
+        
         &__btn {
             display: block;
             top: 24px;
