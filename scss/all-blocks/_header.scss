@@ -76,7 +76,7 @@
             
         }
         
-        &__nav {
+        .header__left-side &__nav  {
             display: none;
             position: absolute;
             top: 100%;
@@ -101,7 +101,7 @@
             display: none;
         }
         
-        &__list {
+        .header__left-side &__list {
             top: 100%;
             left: 0;
             background-color: #333A44;
@@ -118,7 +118,7 @@
             padding-bottom: 12px;
         }
         
-        &__link {
+        .header__left-side &__link {
             @include setFont('Space Mono', bold, 18px, 25px, $lightGrey);            
         }
         

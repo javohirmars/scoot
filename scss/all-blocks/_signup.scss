@@ -93,10 +93,16 @@
 
 @media only screen and (max-width:500px) {
     .signup {
-        background-position: calc(50% - 120px) calc(50% + 180px);
+        background-position: calc(50% - 230px) calc(50% + 180px);
         
+        &__container {     
+            padding-top: 88px;
+            padding-bottom: 88px;
+        }
+
         &__heading {
             font-size: 32px;
+            line-height: 32px;
             width: 311px;
             margin-bottom: 40px;
         }
